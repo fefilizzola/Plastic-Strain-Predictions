@@ -1,0 +1,21 @@
+clear all; clc;
+
+%Loading measured data
+load ('/Users/fernanda/Documents/Tese_Mestrado/GitHub/Plastic-Strain-Predictions/plots/angles.mat')
+
+%Loading predicted data
+load ('/Users/fernanda/Documents/Tese_Mestrado/GitHub/Plastic-Strain-Predictions/plots/angles.mat')
+load ('/Users/fernanda/Documents/Tese_Mestrado/Paper2/Python/Sample2/PCA_35/DT/Etn_DT_35.mat')
+load ('/Users/fernanda/Documents/Tese_Mestrado/Paper2/Python/Sample2/PCA_35/DT/Ett_DT_35.mat')
+
+RDM.Strains.Enn = Enn_DT_35;
+RDM.Strains.Etn = Etn_DT_35;
+RDM.Strains.Ett = Ett_DT_35;
+
+RDM_DT_35 = RDM;
+
+save('test.mat','RDM_DT_35');
+
+% o numero 1 faz com que o manto od grao nao saia na imagem, apenas o
+% contorno
+DICPlot(RDM_DT_35, 1); 
