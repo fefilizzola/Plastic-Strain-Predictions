@@ -1,6 +1,6 @@
-plots
-venv
-testes
+/plots
+/venv
+/testes
 /MLP/Sample1_generated
 corr.ipynb
 
